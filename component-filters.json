@@ -43,7 +43,10 @@
   {
     "id": "social-media",
     "components": [
-      "text"
+      "text",
+      "image",
+      "button",
+      "title"
     ]
   }
 ]
