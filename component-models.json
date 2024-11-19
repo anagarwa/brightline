@@ -180,5 +180,16 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "social-media",
+    "fields": [
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      }
+    ]
   }
 ]
