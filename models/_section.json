@@ -20,15 +20,11 @@
       "id": "section",
       "fields": [
         {
-          "component": "multiselect",
+          "component": "text",
           "name": "style",
+          "value": "",
           "label": "Style",
-          "options": [
-            {
-              "name": "Highlight",
-              "value": "highlight"
-            }
-          ]
+          "valueType": "string"
         }
       ]
     }
