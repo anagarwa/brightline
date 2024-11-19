@@ -103,6 +103,109 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+
+async function addEvents(block) {
+  const navDrops = block.querySelectorAll('.nav-drop');
+
+// Function to toggle dropdown visibility on click
+  function toggleDropdown(event) {
+    event.stopPropagation(); // Prevent click from bubbling up
+    this.classList.toggle('show');
+  }
+
+// Function to show dropdown on hover
+  function showDropdown() {
+    this.classList.add('show');
+  }
+
+// Function to hide dropdown on hover
+  function hideDropdown() {
+    this.classList.remove('show');
+  }
+
+// Attach event listeners to each nav-drop
+  navDrops.forEach(navDrop => {
+    // Toggle dropdown on click
+    navDrop.addEventListener('click', toggleDropdown);
+
+    // Show dropdown on hover
+    navDrop.addEventListener('mouseenter', showDropdown);
+    navDrop.addEventListener('mouseleave', hideDropdown);
+  });
+
+// Close all dropdowns if clicking outside any nav-drop
+  document.addEventListener('click', function(event) {
+    navDrops.forEach(navDrop => {
+      if (!navDrop.contains(event.target)) {
+        navDrop.classList.remove('show');
+      }
+    });
+  });
+
+  const menu_wrapper = block.querySelector(".menu-wrapper");
+  const hamburger = block.querySelector(".nav-hamburger");
+  const closeIcon = block.querySelector(".nav-close");
+
+  hamburger.addEventListener("click", () => {
+    menu_wrapper.classList.toggle("menu-open");
+    hamburger.classList.add("menu-open");
+    closeIcon.classList.add("menu-open");
+  });
+
+  closeIcon.addEventListener("click", () => {
+    menu_wrapper.classList.remove("menu-open");
+    hamburger.classList.remove("menu-open");
+    closeIcon.classList.remove("menu-open");
+  });
+
+}
+
+function addIconsToNavDrop(block) {
+  // Select all elements with class 'nav-drop'
+  const navDropElements = block.querySelectorAll(".nav-drop");
+
+  navDropElements.forEach((navDrop) => {
+    // Create the span element
+    const iconSpan = document.createElement("span");
+    iconSpan.classList.add("nav-icons");
+
+    // Create the up arrow icon
+    const upArrow = document.createElement("i");
+    upArrow.classList.add("icon-arrow-up"); // Add your icon class here
+
+    // Create the close icon
+    const closeIcon = document.createElement("i");
+    closeIcon.classList.add("icon-arrow-down"); // Add your icon class here
+
+    // Append icons to span
+    iconSpan.appendChild(upArrow);
+    iconSpan.appendChild(closeIcon);
+
+    // Append the span to the nav-drop element
+    navDrop.insertBefore(iconSpan, navDrop.children[0]);
+  });
+}
+
+function addIconsToTopMenu(block) {
+  const menuItems = block.querySelectorAll(".top-menu ul li");
+
+  menuItems.forEach(item => {
+    const itemText = item.textContent.toLowerCase(); // Convert text content to lowercase
+
+    // Check if the item contains the text 'trips' (case-insensitive)
+    if (itemText.includes("trips")) {
+      const icon = document.createElement("i");
+      icon.classList.add("icon-briefcase"); // Add the briefcase icon
+      item.prepend(icon); // Insert icon before the text
+    }
+    // Check if the item contains the text 'login' (case-insensitive)
+    else if (itemText.includes("login")) {
+      const icon = document.createElement("i");
+      icon.classList.add("icon-login"); // Add the login icon
+      item.prepend(icon); // Insert icon before the text
+    }
+  });
+}
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -162,5 +265,69 @@ export default async function decorate(block) {
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
+
+  const picture = nav.querySelector('picture');
+  if (picture) {
+    picture.remove();
+    // const pictureLink = document.createElement('a');
+    // pictureLink.href = '/';
+    // pictureLink.append(picture);
+    // nav.prepend(pictureLink);
+  }
+
+  const menuWrapper = document.createElement('div');
+  menuWrapper.className = 'menu-wrapper';
+  const topMenu = nav.querySelector('.top-menu ul');
+  if (topMenu) {
+    const topMenuDiv = document.createElement('div');
+    topMenuDiv.className = 'top-menu';
+    topMenuDiv.append(topMenu);
+    menuWrapper.append(topMenuDiv);
+  }
+
+  const primaryMenu = nav.querySelector('.primary-menu ul');
+  if (primaryMenu) {
+    const buttonLink = document.createElement('a');
+    buttonLink.href = '/';
+    buttonLink.textContent = nav.querySelector('.primary-button ul li').textContent;
+    const tempLi = document.createElement('li');
+    tempLi.append(buttonLink);
+    primaryMenu.append(tempLi);
+    const primaryMenuDiv = document.createElement('div');
+    primaryMenuDiv.className = 'primary-menu';
+    primaryMenuDiv.append(primaryMenu);
+    menuWrapper.append(primaryMenuDiv);
+  }
+  nav.textContent = '';
+  const pictureLink = document.createElement('a');
+  pictureLink.className = 'nav-brand';
+  pictureLink.href = '/';
+  pictureLink.append(picture);
+  // const pictureDiv = document.createElement('div');
+  //   pictureDiv.className = 'nav-brand';
+  //   pictureDiv.append(pictureLink);
+  nav.append(pictureLink);
+
+
+  const navMobileHandle = document.createElement('div');
+  navMobileHandle.className = 'nav-mobile-handle';
+  const openMenuButton = document.createElement('div');
+  openMenuButton.classList.add('nav-hamburger');
+  openMenuButton.innerHTML = `
+      <span class="icon-hamburger"></span>
+  `;
+  navMobileHandle.append(openMenuButton);
+
+  const closeMenuButton = document.createElement('div');
+  closeMenuButton.classList.add('nav-close');
+  closeMenuButton.innerHTML = `<span class="icon-close"></span>`;
+  navMobileHandle.append(closeMenuButton);
+
+  nav.append(navMobileHandle);
+  nav.append(menuWrapper);
   block.append(navWrapper);
+  addIconsToNavDrop(block);
+  addIconsToTopMenu(block);
+  addEvents(block);
+
 }
