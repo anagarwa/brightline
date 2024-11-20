@@ -121,6 +121,10 @@
 
 @media (width >= 1024px) {
 
+    .columns > div > .columns-img-col img {
+        max-height: 462px;
+    }
+
     .columns > div > .columns-content-col {
         padding: 0;
     }
