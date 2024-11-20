@@ -127,7 +127,7 @@ export default async function decorate(block) {
     blockConfig['postal-code'] = block.children[2].children[0].textContent;
     blockConfig['submit'] = block.children[3].children[0].textContent;
     blockConfig['action'] = "";
-    const pictureDiv = block.children[4].children[1].children[0];
+    const pictureDiv = block.children[4].children[0].children[0];
 
     block.innerHTML = '';
   const formHeading = document.createElement('div');
