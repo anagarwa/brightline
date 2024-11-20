@@ -158,6 +158,44 @@
     ]
   },
   {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "email",
+        "value": "",
+        "label": "Email Placeholder",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "zipcode",
+        "value": "",
+        "label": "Postal Zipcode Placeholder",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "ctas_submit",
+        "label": "Submit Button"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo",
+        "label": "Logo",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
