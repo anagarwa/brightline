@@ -39,14 +39,5 @@
       "button",
       "title"
     ]
-  },
-  {
-    "id": "social-media",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
   }
 ]
