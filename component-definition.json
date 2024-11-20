@@ -81,6 +81,22 @@
       "id": "blocks",
       "components": [
         {
+          "title": "App Store",
+          "id": "app-store",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "App Store",
+                  "model": "app-store",
+                  "filter": "app-store"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Cards",
           "id": "cards",
           "plugins": {
