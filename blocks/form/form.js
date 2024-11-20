@@ -120,8 +120,14 @@ async function handleSubmit(form) {
 }
 
 export default async function decorate(block) {
-    const {heading, logo, ...blockConfig} = readBlockConfig(block);
-    const pictureDiv = block.children[1].children[1].children[0];
+    const heading = block.children[0].children[0].textContent;
+    const logo = block.querySelector('img').src;
+    const blockConfig = {};
+    blockConfig['email'] = block.children[1].children[0].textContent;
+    blockConfig['postal-code'] = block.children[2].children[0].textContent;
+    blockConfig['submit'] = block.children[3].children[0].textContent;
+    blockConfig['action'] = "";
+    const pictureDiv = block.children[4].children[1].children[0];
 
     block.innerHTML = '';
   const formHeading = document.createElement('div');
