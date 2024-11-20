@@ -544,105 +544,22 @@ header .menu-wrapper .primary-menu > ul > li > a {
 @media (width >= 1024px) {
 
     header .nav-wrapper nav {
-        max-width: 1400px;
-        margin: 0 auto;
         width: calc(100% - 128px);
-        box-sizing: content-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding-top: 0px;
-    }
-    .nav-hamburger {
-        display: none;
-    }
-
-    header nav .nav-mobile-handle{
-        width: 0%;
-        display: none;
     }
 
     header .nav-wrapper a.nav-brand {
         width: 172px;
-        padding-top: 26px;
-        padding-bottom: 16px;
-    }
-
-    header .nav-wrapper a.nav-brand img{
-        width: 100%;
-        height: 42px;
-        padding-top: 32px;
-        padding-bottom: 16px;
-    }
-
-    header .menu-wrapper .top-menu {
-        padding-top: 0px;
-        padding-left: 0px;
-        width: unset;
-        display: block;
-    }
-
-    header .menu-wrapper {
-        display: flex;
-        flex-direction: column;
-        border-top: 0;
-        position: static;
-        background: none;
-        align-items: flex-end;
-        padding: 0;
-        height: auto;
-        overflow: visible;
-    }
-
-    header .menu-wrapper .primary-menu {
-        padding: 0;
-        width: unset;
-        display: block;
-        border-top: 0 solid #f2f2f4;
     }
 
     header .menu-wrapper .primary-menu > ul {
-        display: flex;
-        /*flex-direction: row;*/
-        /*width: 100%;*/
         gap:35px;
-        justify-content: space-between;
-        border-top: none;
         margin: 0px 0 8px;
-        border-top: none;
-        flex-direction: row;
-        padding: 0;
-        /*width: unset;*/
         align-items: center;
     }
     header .menu-wrapper .primary-menu > ul > li {
         font-size: 25px;
         font-weight: 400;
         line-height: 28px;
-        letter-spacing: 0;
-        text-transform: none;
-        /*margin-right: 24px;*/
-        /*width: auto;*/
-
-        position: relative;
-        flex-direction: column;
-        align-items: left;
-        margin: 0;
-        border: 0 none;
-        border-radius: 0;
-        box-shadow: none;
-        background: none;
-        cursor: pointer;
-        overflow: visible;
-        text-align: center;
-        user-select: none;
-        display: flex;
-        justify-content: space-between;
-        align-content: start;
-        width: 100%;
-        outline: none;
-        text-decoration: none;
-        color: #363636;
         background: #fff;
         padding: 4px;
         z-index: 2;
@@ -654,153 +571,5 @@ header .menu-wrapper .primary-menu > ul > li > a {
         text-decoration-color: #ffdb00;
         text-decoration-thickness: 3px;      /* Sets underline thickness */
         text-underline-offset: 2px; /* Sets the underline color to yellow on hover */
-    }
-
-    header .menu-wrapper .primary-menu > ul > li > a {
-        border-radius: 8px;
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        transition: all .3s ease-in-out;
-        cursor: pointer;
-        box-sizing: border-box;
-        width: max-content;
-        position: relative;
-
-        letter-spacing: 0;
-        text-transform: none;
-        flex-shrink: 0;
-
-        background-color: var(--button-background-or-border-color, #ffdb00);
-        color: var(--button-text-color, #363636);
-        fill: var(--button-text-color, #363636);
-
-        margin-left: 24px;
-
-        padding: 8px 16px;
-        font-size: 23px;
-        font-weight: 450;
-        line-height: 26px;
-    }
-
-    header .menu-wrapper .primary-menu > ul > li > ul {
-        transition: max-height .3s linear;
-        overflow: hidden;
-        list-style: none;
-        left: 0;
-        width: max-content;
-        z-index: 3;
-        min-width: calc(100% + 16px);
-        position: absolute;
-        margin-left: -8px;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 15px 20px #0000001a;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    header .menu-wrapper .primary-menu > ul > li > ul {
-        transition: max-height .3s linear;
-        overflow: hidden;
-        list-style: none;
-        /*left: 0;*/
-        width: max-content;
-        z-index: 3;
-        min-width: calc(100% + 16px);
-        position: absolute;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 15px 20px #0000001a;
-
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: start;
-        padding-left: 4px;
-        margin-left: 3px;
-        margin-top: 45px;
-        display: none;
-        background-color: #fff;
-    }
-
-    header .menu-wrapper .primary-menu > ul > li.show ul {
-        display: flex;
-    }
-
-    header .menu-wrapper .primary-menu > ul > li > ul > li {
-        font-size: 25px;
-        font-weight: 400;
-        line-height: 28px;
-        text-decoration: none;
-        color: #363636;
-        background: #fff;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-    .header .menu-wrapper .primary-menu > ul > li > ul > li:hover{
-        background-color: #e8f2f1;
-    }
-
-
-    header .menu-wrapper .primary-menu > ul > li > ul > li > a{
-        text-decoration: none;
-        color: #363636;
-
-    }
-
-
-    header .menu-wrapper .top-menu ul {
-        display: flex;
-        flex-direction: row;
-        /*width: 100%;*/
-        gap:20px;
-        padding: 0;
-        width: unset;
-    }
-
-    header .menu-wrapper .top-menu ul li{
-        font-size: 16px;
-        font-weight: 450;
-        line-height: 20px;
-        letter-spacing: 0;
-
-        width: auto;
-
-
-        position: relative;
-        flex-direction: row;
-
-        margin: 0;
-        border: 0 none;
-        border-radius: 0;
-        box-shadow: none;
-        cursor: pointer;
-        overflow: hidden;
-        text-align: center;
-        user-select: none;
-        display: flex;
-        justify-content: space-between;
-        align-content: start;
-        outline: none;
-        text-decoration: none;
-        color: var(--nav-item-text-color, #363636);
-        background: var(--nav-item-background-color, #fff);
-        padding: 4px;
-
-        z-index: 2;
-
-
-        align-items: center;
-
-        text-transform: capitalize;
-        white-space: nowrap;
-
-    }
-
-    .top-menu ul li  a {
-        text-transform: none;
-        color: var(--nav-item-text-color, #363636);
-
     }
 }
