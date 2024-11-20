@@ -494,239 +494,30 @@ footer .footer > div {
 @media (width >= 1024px) {
 
     footer .footer > div {
-        margin: auto;
         width: calc(100% - 128px);
-        max-width: 1400px;
-        padding: 40px 24px 24px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     footer .footer > div > .left-menu {
-        order: 0;
         width: 50%;
-        padding-left: 0;
     }
 
     footer .footer > div > .right-menu {
-        order: 1;
         width: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-bottom: 110px;
-        border-top: 0px;
-        border-bottom: 0px;
-    }
-
-    footer .footer > div > .copy-right {
-        order: 3;
-        width: 100%;
-        color: #fff;
-        padding-top: 20px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0;
-        text-transform: none;
-    }
-
-    footer .right-menu .social-media i {
-        color: #fff;
-        font-size: 16px;
-        text-decoration-color: #fff; /* Adds a 1px white border around the icon */
-    }
-    footer  [class^="icon-"]:after {
-        font-family: icon-font;
-        font-style: normal;
-        font-weight: 400;
-        font-variant: normal;
-        text-decoration: inherit;
-        text-rendering: optimizeLegibility;
-        text-transform: none;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        --icon-color: #fff;
-    }
-
-    footer .icon-youtube:after {
-        content: "\f110";
-    }
-
-    footer .icon-instagram:after {
-        content: "\f127";
-    }
-
-    footer .icon-twitter:after {
-        content: "\f127";
-    }
-
-    footer .icon-facebook:after {
-        content: "\f154";
-    }
-
-    footer .icon-linkedin:after {
-        content: "\f151";
-    }
-
-    footer .img-twitter {
-        height: 32px;
-
-    }
-
-    footer .left-menu > div> ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-left: 0;
-    }
-
-    footer .left-menu .category {
-        padding: 0 24px 0 0;
-        width: fit-content;
-        display: flex;
-        flex-direction: column;
-        max-width: 440px;
-        list-style-type: none;
-        padding-left: 0;
-        margin: 0;
-
-        font-size: 22px;
-        font-weight: 450;
-        line-height: 26px;
-        letter-spacing: 0;
-        text-transform: none;
-        font-family: Futura PT, sans-serif;
-        color: #fff;
-        padding: 8px 0;
-        margin-top: 0;
-        margin-bottom: 0;
     }
 
     footer .left-menu .category ul {
-        display: flex;
-        flex-direction: column;
-        max-width: 440px;
-        list-style-type: none;
-        padding-left: 0;
-        margin: 0;
         padding-top: 25px;
-        padding-bottom: 40px;
     }
 
-    footer .left-menu .category ul li {
-        display: block;
-        padding-bottom: 5px;
-        padding-top: 5px;
-    }
 
 
     footer .left-menu .category ul li a {
         position: relative;
         align-items: center;
-        margin: 0;
-        border: 0 none;
-        border-radius: 0;
-        box-shadow: none;
-        background: none;
-        cursor: pointer;
-        overflow: hidden;
         text-align: center;
-        user-select: none;
-        display: flex;
-        flex-direction: row;
-        max-width: 440px;
-        width: fit-content;
-        outline: none;
-        text-decoration: none;
-        color: #fff;
         padding: 8px 2px;
-        font-size: 14px;
-        font-weight: 450;
-        line-height: 20px;
-        letter-spacing: 0;
-        text-transform: none;
     }
-
-
-    footer .right-menu .social-media ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-left: 0;
-        list-style-type: none;
-    }
-
-    footer .right-menu .social-media ul li {
-        display: block;
-    }
-
-    footer .right-menu .social-media ul li a{
-        width: 32px;
-        height: 32px;
-        box-sizing: border-box;
-        outline: none;
-        border: 1px solid #fff;
-        color: #565656;
-        border-radius: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
-        text-decoration: none;
-        transition: all .3s ease-in-out;
-    }
-
-    footer .right-menu .app-store ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    footer .right-menu .default-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        color: #fff;
-        padding-left: 0px;
-    }
-
-    footer .right-menu .default-content-wrapper p {
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 26px;
-        letter-spacing: 0;
-        text-transform: none;
-        color: #fff;
-    }
-
-    footer .right-menu .default-content-wrapper p a {
-        color: #fff;
-    }
-
-    footer .right-menu .default-content-wrapper p strong{
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: .04em;
-        text-transform: none;
-        color: #fff;
-        font-family: Futura PT, sans-serif;
-    }
-
-
-
-    footer .right-menu .app-store ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-left: 0;
-    }
-
-
-
+    
     footer .footer > div {
         padding: 40px 32px 24px;
     }
