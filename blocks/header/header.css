@@ -608,7 +608,7 @@ header .menu-wrapper .primary-menu > ul > li > a {
         gap:35px;
         justify-content: space-between;
         border-top: none;
-        margin: 12px 0 8px;
+        margin: 0px 0 8px;
         border-top: none;
         flex-direction: row;
         padding: 0;
