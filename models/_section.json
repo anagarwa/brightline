@@ -7,7 +7,9 @@
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/section/v1/section",
-            "template": {}
+            "template": {
+              "model": "section"
+            }
           }
         }
       }
