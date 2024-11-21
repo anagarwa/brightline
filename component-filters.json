@@ -18,7 +18,8 @@
       "fragment",
       "social-media",
       "app-store",
-      "form"
+      "form",
+      "offercards"
     ]
   },
   {
@@ -40,6 +41,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "offercards",
+    "components": [
+      "offercard"
     ]
   }
 ]
